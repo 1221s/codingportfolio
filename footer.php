@@ -9,10 +9,10 @@
           <div class="emailMeContainer">
           <h3><i class="fas fa-envelope"></i> contact@1221s.com</h3>
           </div>
+          <div class="emailMeContainer footerAddLine">
+          <h3><i class="fas fa-mobile-alt"></i> +45 81188565</h3>
+          </div>
         </div>
     </div>
-
-<img class="footer-foto" src="<?php echo get_template_directory_uri()?>/img/footer-foto.jpg"
-        alt="this was supposed to be the second portfolio img">
 </footer>
 </html>

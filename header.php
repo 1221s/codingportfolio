@@ -35,15 +35,9 @@
 <!-- Here starts the header -->
   <header>
     <div class="headerContentWrapper">
-        <div class="blogHeader"> <h1> <?php echo get_bloginfo( 'name' ); ?> </h1>
+        <div class="blogHeader"><h1> <?php echo get_bloginfo( 'name' ); ?> </h1>
+          <p><?php echo get_bloginfo( 'description' ); ?></p>
         </div>
 
-          <div class="navigationMenu">
-            <?php wp_nav_menu( array('theme_location' => 'main_menu' ) ); ?>
-          </div>
-    </div>
-    <div class="mainPhoto">
-      <img  src="<?php echo get_template_directory_uri()?>/img/main-foto.jpg" alt="This was supposed to be my blog photo">
-    </div>
 
   </header>

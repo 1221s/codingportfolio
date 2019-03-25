@@ -3,58 +3,79 @@
 <body class="index">
 
   <!-- Here starts the index banner -->
-<div class="indexBannerWrapper">
-    <div class="indexBanner" id="banner">
-      <?php
-        $id = 64;
-        $p = get_page($id);
-        echo apply_filters('the_content', $p->post_content);
-      ?>
-    </div>
-    <div class="bannerBit">
-      <p>Giveaway piece: rms/0R0Y2O</p>
-    </div>
-</div>
-<div class="bannerHeader">
-  <h2><?php the_field('welcome') ?></h2>
-  <span>Do you think portfolios are boring? Would you rather be playing ... a game?</span>
-  <span>I've hidden three pieces of a puzzle around the website, some in plain sight, others a little more obscure.</span>
-  <span id="findThemAll">Find them all to enter a giveaway!</span>
-  <span class="bannerHint"> <?php the_field('hint'); ?> </span>
-</div>
 
-<!-- HERE starts posts -->
-<div class="indexHeader">
-<h2 class="indexHeaderWSidetxt">Newest projects</h2>
-<p>To see more take a look at the <a href="<?php echo get_page_link(19); ?>">Archive</a> </p>
-</div>
+<section class="indexWrapper homepage">
 
-<?php
+  <div class="maintxt">
+    <div class="maintxtHeader">
+      <h2><?php the_field('maintxtheader') ?></h2>
+    </div>
+    <span class="maintxtContent">
+      <p><?php the_field('maintxtContent') ?></p>
+    </span>
+
+    <div class="buttons">
+        <ul>
+          <li id="button1">
+            <a href="<?php the_field('button1') ?>" target="_blank"><i class="fas fa-file-download"></i> Download mit CV</a></li>
+
+
+          <li id="button2">
+            <a href="<?php the_field('button2') ?>"><i class="fas fa-mobile-alt"></i> Mit arbejde</a>
+          </li>
+
+          <li id="button3">
+            <a href="<?php the_field('button3') ?>"><i class="fas fa-envelope"></i> Kontakt mig</a> </li>
+
+          <li id="button4"><a href="<?php the_field('button4') ?>" target="_blank"><i class="fab fa-twitter"></i> @fiamma1221s</a></li>
+        </ul>
+
+    </div>
+  </div>
+  <div class="mainImg">
+    <img class="mainImgFile" src="<?php the_field('mainimg') ?>" alt="this was supposed to be an img">
+  </div>
+
+</section>
+
+<section class="indexWrapper arbejde">
+
+  <h2>Mit Arbejde</h2>
+
+  <?php
 // the query
 $wpb_all_query = new WP_Query(array('post_type'=>'post',
-'post_status'=>'publish', 'posts_per_page'=>6)); ?>
+'post_status'=>'publish', 'posts_per_page'=>8)); ?>
 <?php if ( $wpb_all_query->have_posts() ) : ?>
 
-<div class="postWrapperContainer">
-      <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+<ul class="arbejdeList">
 
-      <a href="<?php the_permalink() ?>" class="postWrapper">
-        <div class="authorIndex">
-        <h3><?php the_title(); ?></h3>
-        <p><?php the_excerpt(); ?></p>
-        </div>
-          <div class="thumbnailIndex">
-            <?php the_post_thumbnail('medium_large'); ?>
-          </div>
-      </a>
-      <?php endwhile; ?>
-      </div>
+    <!-- the loop -->
+    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+        <li class="arbejdeitem">
+          <a href="<?php the_permalink(); ?>">
+            <div class="postTitle">
+            <p><?php the_title(); ?></p>
+            </div>
+            <?php the_post_thumbnail('medium'); ?>
+          </a></li>
+    <?php endwhile; ?>
+    <!-- end of the loop -->
 
-    <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-    <?php endif; ?>
+</ul>
+
+    <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+</section>
+
+
+<section class="indexFooterBuffer">
+
+</section>
 
 <?php  get_footer();  ?>
-
-
 </body>
