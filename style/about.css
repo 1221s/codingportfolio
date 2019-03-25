@@ -1,0 +1,303 @@
+/*about small */
+
+.about .aboutSmall {
+  width:100vw;
+  margin:auto;
+  min-height:600px;
+}
+
+.about .aboutSmallTxtArea {
+  position:absolute;
+  margin-top: 20px;
+  margin-left:23vw;
+  width:30vw;
+  height:auto;
+  float:left;
+
+  transition-duration:0.4s;
+}
+
+.about #aboutSmallTxtArea {
+  opacity:1;
+  transition-delay:0.6s;
+}
+
+.about #aboutSmallTxtArea2 {
+  margin-left:47vw;
+  width:40vw;
+
+  opacity:0;
+  transition-delay:0s;
+
+}
+
+.aboutSmallTxtArea br {
+  line-height:10px;
+}
+
+ .selfie {
+  position:relative;
+  width: 25vw;
+  height:700px;
+  float:right;
+  margin-top:-11px;
+
+  border:1px solid #659157;
+  border-radius: 0 0 500px 500px;
+  border-width: 1px 1px 1px 1px;
+
+
+  background-color:#404040;
+}
+
+.selfie img {
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  border-radius:inherit;
+
+  cursor:pointer;
+}
+
+#selfie {
+    margin-right:20vw;
+
+  transition-duration:0.4s;
+  transition-delay:0.2s;
+
+  /* margin-right:60vw; */
+}
+
+/* cv button */
+
+.buttonContainer {
+position:relative;
+width:30vw;
+height:auto;
+margin-left:25vw;
+margin-top:710px;
+
+transition-duration:0.4s;
+transition-delay:0.2s;
+}
+
+.cvButton {
+  width:30%;
+  max-height:200px;
+  float:left;
+
+  padding:10px;
+  text-align:center;
+  background-color:#659157;
+  border-radius:15px;
+
+}
+
+.cvButton i {
+  float:left;
+  font-size:2em;
+  position:relative;
+  top:10px;
+  left:15px;
+
+}
+
+.cvButton i, .cvButton p, .cvButton a {
+  color:white;
+}
+
+.cvButton a {
+  text-decoration:none;
+  font-size:.7em;
+  position:relative;
+  top:5px;
+}
+
+#linkedInBtn {
+  margin-left:10px;
+}
+
+/* the header thing */
+
+.about .indexHeaderWSidetxt {
+  margin-top:5px;
+}
+
+.about .proficienciesHeader p {
+  position:relative;
+  top:-20px;
+  opacity:0;
+}
+
+.about .proficienciesHeader p:hover {
+  opacity:0.5;
+}
+
+/* Proficiencies */
+
+.profficiencies {
+  width:80vw;
+  min-height:500px;
+  margin:auto;
+}
+
+.profficiencyWrapper {
+  width:100%;
+  max-width:80vw;
+  clear:both;
+  margin-top:60px;
+
+  background-color:grey;
+  border: 1px solid black;
+  border-width: 1px 0 0 0;
+}
+
+
+.profficiencyWrapper h4 {
+  position:relative;
+  float:left;
+  top:-50px;
+
+}
+
+.stringWrapper ul {
+  position:relative;
+  width:70vw;
+  height:auto;
+  min-height:150px;
+  float:right;
+
+}
+
+.stringWrapper li {
+  width:80px;
+  height:100px;
+  max-width:80px;
+  margin-right:50px;
+  margin-top:-17px;
+  padding:10px;
+
+  background-color:#659157;
+  border: 1px solid black;
+  border-radius: 0 0 100px 100px;
+
+  float:lefT;
+    text-align:center;
+
+}
+
+.stringWrapper i, .stringWrapper span {
+  color:white;
+}
+
+.stringWrapper i {
+  font-size:2.5em;
+  margin-top:20px;
+}
+
+/* the hover parts of the profficiencies */
+
+#adobeNoteP {
+  opacity:0;
+  position:absolute;
+  left:-5vw;
+  top:15vh;
+  color:black;
+  font-style:italic;
+
+  transition-duration:0.3s;
+}
+.againNote {
+  opacity:1;
+  position:absolute;
+  right:10vw;
+  top:60vh;
+}
+
+.againNote p {
+  color:white;
+}
+
+/* eyes */
+
+.aspectsWrapper {
+  width:100vw;
+  margin:auto;
+  min-height:600px;
+  text-align:center;
+  background-color:#cfcfcf;
+}
+
+.body {
+  position:relative;
+  width:100%;
+  height:700px;
+  left:0vw;
+}
+
+.body img {
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  margin:auto;
+}
+
+.face {
+  width: 120px;
+  height: 120px;
+
+  margin-left:43.7vw;
+  margin-top:105px;
+  text-align: center;
+  position: absolute;
+  z-index:5;
+  transform:rotate(15deg);
+}
+
+.eye {
+  border-radius: 25px;
+  margin-top: 1em;
+  background: rgba(0, 0, 0, 1);
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  background: #fff;
+}
+
+.eye.animate {
+  transition: all 100ms;
+}
+
+.eye:after {
+  content: " ";
+  bottom: 5px;
+  right: 1px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 15px;
+}
+
+#animate {
+  outline: none;
+  background: #FFF;
+  border: solid thin #000;
+  padding: 15px;
+  margin: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #000;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+#animate:hover {
+  background: #000;
+  color: #FFF;
+  border: solid thin white;
+}
